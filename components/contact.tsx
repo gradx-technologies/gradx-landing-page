@@ -4,8 +4,6 @@ import { useState } from 'react'
 import {
   ArrowRight,
   CheckCircle2,
-  Mail,
-  Phone,
 } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
@@ -77,54 +75,6 @@ export function Contact() {
               ecosystem.
             </p>
 
-            {/* Contact details */}
-            <div className="mt-10 border-t border-[#e5e2e9] pt-7">
-
-              <a
-                href="mailto:partnerships@gradx.app"
-                className="group flex items-center gap-4 py-2"
-              >
-                <span className="flex size-10 shrink-0 items-center justify-center rounded-full border border-[#ddd9e2] bg-white">
-                  <Mail
-                    className="size-4 text-[#6246d9]"
-                    strokeWidth={1.8}
-                  />
-                </span>
-
-                <span>
-                  <span className="block text-[11px] font-semibold uppercase tracking-[0.14em] text-[#918b98]">
-                    Email
-                  </span>
-
-                  <span className="mt-1 block text-sm font-medium text-[#34313a]">
-                    partnerships@gradx.app
-                  </span>
-                </span>
-              </a>
-
-              <a
-                href="tel:+911800000000"
-                className="group mt-3 flex items-center gap-4 py-2"
-              >
-                <span className="flex size-10 shrink-0 items-center justify-center rounded-full border border-[#ddd9e2] bg-white">
-                  <Phone
-                    className="size-4 text-[#6246d9]"
-                    strokeWidth={1.8}
-                  />
-                </span>
-
-                <span>
-                  <span className="block text-[11px] font-semibold uppercase tracking-[0.14em] text-[#918b98]">
-                    Phone
-                  </span>
-
-                  <span className="mt-1 block text-sm font-medium text-[#34313a]">
-                    +91 91486 30441
-                  </span>
-                </span>
-              </a>
-
-            </div>
           </div>
 
           {/* ============================================================ */}

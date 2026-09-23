@@ -68,10 +68,10 @@ export function SiteFooter() {
           </a>
 
           {/* Navigation */}
-          <div className="grid grid-cols-3 gap-8 lg:gap-10">
+          <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3 sm:gap-8 lg:gap-10">
 
             {/* Platform */}
-            <div className="min-w-[110px]">
+            <div className="min-w-0 sm:min-w-[110px]">
               <p className="mb-5 text-sm font-medium text-white">
                 Platform
               </p>
@@ -91,7 +91,7 @@ export function SiteFooter() {
             </div>
 
             {/* Who We Serve */}
-            <div className="min-w-[130px]">
+            <div className="min-w-0 sm:min-w-[130px]">
               <p className="mb-5 text-sm font-medium text-white">
                 Who We Serve
               </p>
@@ -111,7 +111,7 @@ export function SiteFooter() {
             </div>
 
             {/* Company */}
-            <div className="min-w-[100px]">
+            <div className="col-span-2 min-w-0 sm:col-span-1 sm:min-w-[100px]">
               <p className="mb-5 text-sm font-medium text-white">
                 Company
               </p>
@@ -134,63 +134,65 @@ export function SiteFooter() {
         </div>
 
         {/* Contact strip */}
-        <div className="flex flex-col gap-5 border-t border-[#302d36] py-8 sm:flex-row sm:items-center sm:gap-10">
-          <a
-            href="mailto:partnerships@gradx.app"
-            className="group flex w-fit items-center gap-3"
-          >
-            <span className="flex size-9 shrink-0 items-center justify-center rounded-full border border-[#39353f] bg-[#1d1a23]">
-              <Mail
-                className="size-4 text-[#a99af0]"
-                strokeWidth={1.7}
-              />
-            </span>
+        <div className="border-t border-[#302d36] py-8">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <a
+              href="mailto:partnerships@gradx.app"
+              className="group flex w-fit items-center gap-3"
+            >
+              <span className="flex size-9 shrink-0 items-center justify-center rounded-full border border-[#39353f] bg-[#1d1a23]">
+                <Mail
+                  className="size-4 text-[#a99af0]"
+                  strokeWidth={1.7}
+                />
+              </span>
 
-            <span className="text-sm font-medium text-[#c5c0cc] transition-colors group-hover:text-white">
-              partnerships@gradx.app
-            </span>
-          </a>
+              <span className="text-sm font-medium text-[#c5c0cc] transition-colors group-hover:text-white">
+                partnerships@gradx.app
+              </span>
+            </a>
 
-          <a
-            href="tel:+911800000000"
-            className="group flex w-fit items-center gap-3"
-          >
-            <span className="flex size-9 shrink-0 items-center justify-center rounded-full border border-[#39353f] bg-[#1d1a23]">
-              <Phone
-                className="size-4 text-[#a99af0]"
-                strokeWidth={1.7}
-              />
-            </span>
+            <a
+              href="tel:+911800000000"
+              className="group flex w-fit items-center gap-3"
+            >
+              <span className="flex size-9 shrink-0 items-center justify-center rounded-full border border-[#39353f] bg-[#1d1a23]">
+                <Phone
+                  className="size-4 text-[#a99af0]"
+                  strokeWidth={1.7}
+                />
+              </span>
 
-            <span className="text-sm font-medium text-[#c5c0cc] transition-colors group-hover:text-white">
-              +91 91486 30441
-            </span>
-          </a>
+              <span className="text-sm font-medium text-[#c5c0cc] transition-colors group-hover:text-white">
+                +91 91486 30441
+              </span>
+            </a>
+          </div>
 
           {/* Copyright + legal links, aligned to the right of the strip */}
-          <div className="flex flex-col gap-4 sm:ml-auto sm:flex-row sm:items-center sm:gap-6">
-            <p className="text-xs text-[#625d68]">
+          <div className="mt-6 flex flex-col gap-4 border-t border-[#302d36] pt-5 sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-xs leading-5 text-[#77727e]">
               © {new Date().getFullYear()} GradX. All rights reserved.
             </p>
 
-            <div className="flex items-center gap-6">
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs">
               <a
                 href="#top"
-                className="text-xs text-[#625d68] transition-colors hover:text-[#96919c]"
+                className="text-[#77727e] transition-colors hover:text-white"
               >
                 Privacy
               </a>
 
               <a
                 href="#top"
-                className="text-xs text-[#625d68] transition-colors hover:text-[#96919c]"
+                className="text-[#77727e] transition-colors hover:text-white"
               >
                 Terms
               </a>
 
               <a
                 href="#contact"
-                className="text-xs text-[#625d68] transition-colors hover:text-[#96919c]"
+                className="text-[#77727e] transition-colors hover:text-white"
               >
                 Contact
               </a>
