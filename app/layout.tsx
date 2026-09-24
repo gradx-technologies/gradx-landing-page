@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ??
-  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://gradx.app')
+  'https://gradx-landing-page-skuk.vercel.app'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
