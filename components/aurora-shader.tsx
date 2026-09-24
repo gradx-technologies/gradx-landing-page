@@ -11,7 +11,7 @@ void main() {
 `
 
 // Domain-warped fbm (fractal brownian motion) that paints soft, flowing
-// bands of the GradX brand palette — indigo, violet, blue and sky — over
+// bands of the GradX brand palette: indigo, violet, blue and sky, over
 // the near-white page background. Domain warping gives the colour fields
 // that silk-like, aurora quality instead of plain blobby noise.
 const FRAGMENT_SHADER = `

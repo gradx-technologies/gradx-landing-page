@@ -1,4 +1,3 @@
-import { GradXMark } from '@/components/gradx-mark'
 import { Mail, Phone } from 'lucide-react'
 
 const LINKS = [
@@ -7,14 +6,14 @@ const LINKS = [
     items: [
       { label: 'Solutions', href: '#solutions' },
       { label: 'How It Works', href: '#how-it-works' },
-      { label: 'Outcomes', href: '#results' },
+      { label: 'Placement Journey', href: '#how-it-works' },
     ],
   },
   {
     title: 'Who We Serve',
     items: [
-      { label: 'For Colleges', href: '#for-colleges' },
-      { label: 'For Employers', href: '#for-employers' },
+      { label: 'For Colleges', href: '#audience' },
+      { label: 'For Employers', href: '#audience' },
       { label: 'Partner With Us', href: '#contact' },
     ],
   },
@@ -61,7 +60,7 @@ export function SiteFooter() {
           >
             <span
               aria-hidden="true"
-              className="whitespace-nowrap text-[clamp(5rem,9vw,7.5rem)] font-semibold leading-none tracking-[-0.09em] text-[#211e27]"
+              className="whitespace-nowrap bg-[linear-gradient(45deg,rgba(182,177,187,0.3)_0%,rgba(182,177,187,0.12)_100%)] bg-clip-text text-[clamp(5rem,9vw,7.5rem)] font-semibold leading-none tracking-[-0.03em] text-transparent"
             >
               GradX
             </span>
@@ -153,7 +152,7 @@ export function SiteFooter() {
             </a>
 
             <a
-              href="tel:+911800000000"
+              href="tel:+919148630441"
               className="group flex w-fit items-center gap-3"
             >
               <span className="flex size-9 shrink-0 items-center justify-center rounded-full border border-[#39353f] bg-[#1d1a23]">

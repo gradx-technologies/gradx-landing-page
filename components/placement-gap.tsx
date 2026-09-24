@@ -5,7 +5,7 @@ const GAPS = [
     icon: Users,
     title: "Talent exists.",
     highlight: "Readiness doesn’t scale.",
-    body: "Aptitude, communication, and interview preparation vary across every batch — leaving capable students underprepared when opportunities arrive.",
+    body: "Aptitude, communication, and interview preparation vary across every batch. This leaves capable students underprepared when opportunities arrive.",
   },
   {
     icon: Building2,

@@ -120,7 +120,7 @@ export function Solutions() {
           })}
         </div>
 
-        {/* Closing statement — same language as your previous section */}
+        {/* Closing statement */}
         <div className="mt-8 overflow-hidden rounded-[1.75rem] bg-[#17151c]">
 
           <div className="border-l-[3px] border-[#6246d9] px-7 py-8 sm:px-10 sm:py-10">

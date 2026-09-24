@@ -30,7 +30,7 @@ export function Hero() {
 
       {/* WebGPU shader background. */}
       <div
-        className="pointer-events-none absolute inset-x-0 -inset-y-20 opacity-30"
+        className="pointer-events-none absolute inset-x-0 -inset-y-20 opacity-45"
         aria-hidden="true"
       >
         {shaderUnavailable ? null : (
@@ -79,12 +79,12 @@ export function Hero() {
         {/* Main headline */}
         <h1 className="max-w-4xl text-balance text-[clamp(2.75rem,6vw,5.25rem)] font-medium leading-[1] tracking-[-0.055em] text-[#16161d]">
 
-          Your college's
+          Meet GradX.
 
           <br />
 
-          <span className="bg-gradient-to-r from-[#6246d9] via-[#8066e6] to-[#a99af0] bg-clip-text font-semibold text-transparent">
-            extended placement team.
+          <span className="bg-gradient-to-r from-[#6246d9] via-[#8066e6] to-[#a99af0] bg-clip-text font-semibold text-transparent lg:whitespace-nowrap">
+            The future of placements.
           </span>
 
         </h1>
@@ -93,7 +93,7 @@ export function Hero() {
         <p className="mt-7 max-w-2xl text-balance text-[15px] leading-7 text-[#5c5c6b] sm:text-base sm:leading-7 lg:text-[17px]">
           GradX helps institutions prepare students, build stronger employer
           relationships, and run placement operations through one connected
-          system — from readiness to offer.
+          system, from readiness to offer.
         </p>
 
         {/* CTAs */}

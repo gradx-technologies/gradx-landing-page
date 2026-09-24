@@ -69,7 +69,7 @@ export function About() {
             <p className="max-w-md text-[15px] leading-7 text-[#aaa5b0]">
               Talent and opportunity too often exist in separate systems.
               GradX brings institutions and employers onto shared
-              infrastructure — creating a more connected path from
+              infrastructure, creating a more connected path from
               preparation to placement.
             </p>
           </div>

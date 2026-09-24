@@ -1,16 +1,15 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 import { Menu, ArrowUpRight, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
-import { GradXMark } from '@/components/gradx-mark'
 
 const NAV_LINKS = [
-  { label: 'For Colleges', href: '#for-colleges' },
-  { label: 'For Employers', href: '#for-employers' },
   { label: 'Solutions', href: '#solutions' },
   { label: 'How It Works', href: '#how-it-works' },
-  { label: 'Success Stories', href: '#results' },
+  { label: 'For Colleges', href: '#audience' },
+  { label: 'For Employers', href: '#audience' },
   { label: 'About', href: '#about' },
 ]
 
@@ -56,37 +55,27 @@ export function SiteHeader() {
           : 'bg-transparent',
       )}
     >
-      <div className="mx-auto flex h-[82px] max-w-[1280px] items-center px-6 lg:px-8">
+      <div className="relative mx-auto flex h-[82px] max-w-[1280px] items-center px-6 lg:px-8">
 
         {/* Logo */}
         <a
           href="#top"
           onClick={(event) => navigateToSection(event, '#top')}
           className="group flex shrink-0 items-center gap-3"
+          aria-label="GradX home"
         >
-          <GradXMark
-            className="
-              size-9
-              transition-transform
-              duration-300
-              group-hover:scale-105
-            "
+          <Image
+            src="/gx_logo.png"
+            alt=""
+            width={72}
+            height={31}
+            className="h-7 w-auto transition-transform duration-300 group-hover:scale-105"
           />
 
-          <span
-            className="
-              text-[20px]
-              font-semibold
-              tracking-[-0.03em]
-              text-[#0B1220]
-            "
-          >
-            GradX
-          </span>
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="ml-auto hidden items-center gap-9 xl:flex">
+        <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-10 xl:flex">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
@@ -97,6 +86,7 @@ export function SiteHeader() {
                 font-medium
                 tracking-[-0.01em]
                 text-slate-600
+                whitespace-nowrap
                 transition-colors
                 duration-200
                 hover:text-[#0B1220]
@@ -108,7 +98,7 @@ export function SiteHeader() {
         </nav>
 
         {/* CTA */}
-        <div className="ml-8 hidden items-center xl:flex">
+        <div className="ml-auto hidden items-center xl:flex">
           <a
             href="#contact"
             onClick={(event) => navigateToSection(event, '#contact')}

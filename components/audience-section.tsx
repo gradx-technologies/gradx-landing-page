@@ -168,7 +168,7 @@ function AudienceSection() {
 
           <p className="max-w-md text-[15px] leading-7 text-[#716c78] lg:mb-1">
             GradX brings institutions and employers into one connected
-            placement ecosystem — making it easier to prepare talent,
+            placement ecosystem, making it easier to prepare talent,
             create opportunity, and move both sides forward.
           </p>
         </div>
@@ -214,7 +214,7 @@ function AudienceSection() {
             </div>
 
             {/* ============================================================ */}
-            {/* CENTER — LIGHTNING                                             */}
+            {/* CENTER: LIGHTNING                                               */}
             {/* ============================================================ */}
 
             <div className="relative flex items-center justify-center py-16 lg:py-0">

@@ -14,7 +14,6 @@ import {
   Field,
   FieldGroup,
   FieldLabel,
-  FieldDescription,
 } from '@/components/ui/field'
 
 import {
@@ -94,7 +93,7 @@ export function Contact() {
                 </div>
 
                 <h3 className="mt-6 text-2xl font-medium tracking-[-0.03em] text-[#17151c]">
-                  Thanks — we&rsquo;re on it.
+                  Thanks, we&rsquo;re on it.
                 </h3>
 
                 <p className="mt-3 max-w-sm text-sm leading-6 text-[#706b76]">
@@ -185,23 +184,23 @@ export function Contact() {
                         I am reaching out as
                       </FieldLabel>
 
-                      <Select defaultValue="college">
-                        <SelectTrigger className="h-11 w-full border-[#ddd9e2] bg-[#fafafa] text-[#34313a]">
+                      <Select defaultValue="College">
+                        <SelectTrigger size="lg" className="w-full rounded-lg border-[#ddd9e2] bg-[#fafafa] px-3 text-sm text-[#34313a]">
                           <SelectValue />
                         </SelectTrigger>
 
-                        <SelectContent>
+                        <SelectContent className="rounded-xl p-1.5 shadow-lg">
                           <SelectGroup>
-                            <SelectItem value="college">
-                              A college / placement cell
+                            <SelectItem value="College" className="h-10 rounded-lg px-3 text-sm">
+                              College / Placement Cell
                             </SelectItem>
 
-                            <SelectItem value="employer">
-                              An employer / recruiter
+                            <SelectItem value="Employer" className="h-10 rounded-lg px-3 text-sm">
+                              Employer / Recruiter
                             </SelectItem>
 
-                            <SelectItem value="other">
-                              Something else
+                            <SelectItem value="Other" className="h-10 rounded-lg px-3 text-sm">
+                              Other
                             </SelectItem>
                           </SelectGroup>
                         </SelectContent>
@@ -227,9 +226,6 @@ export function Contact() {
                       className="resize-none border-[#ddd9e2] bg-[#fafafa] text-[#17151c] placeholder:text-[#aaa5b0] focus-visible:border-[#8066e6] focus-visible:ring-[#8066e6]/20"
                     />
 
-                    <FieldDescription className="text-[#918b98]">
-                      We&rsquo;ll never share your details.
-                    </FieldDescription>
                   </Field>
 
                   {/* Submit */}
