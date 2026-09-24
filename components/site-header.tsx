@@ -78,7 +78,7 @@ export function SiteHeader() {
         <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-10 xl:flex">
           {NAV_LINKS.map((link) => (
             <a
-              key={link.href}
+              key={link.label}
               href={link.href}
               onClick={(event) => navigateToSection(event, link.href)}
               className="
@@ -179,7 +179,7 @@ export function SiteHeader() {
           <div className="flex flex-col gap-1">
             {NAV_LINKS.map((link) => (
               <a
-                key={link.href}
+                key={link.label}
                 href={link.href}
                 onClick={(event) => navigateToSection(event, link.href)}
                 className="
