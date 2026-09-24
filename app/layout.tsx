@@ -13,11 +13,44 @@ const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
 })
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://gradx.app')
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: 'GradX | Placement Infrastructure for Colleges',
   description:
     'GradX is your college\u2019s extended placement team. Build stronger employer connections, prepare students for recruitment, and streamline placement execution end to end.',
-  generator: 'v0.app',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_IN',
+    url: '/',
+    siteName: 'GradX',
+    title: 'GradX | The Future of Placements',
+    description:
+      'Placement infrastructure that connects student readiness, employer access, and placement operations.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'GradX | The Future of Placements',
+    description:
+      'Placement infrastructure that connects student readiness, employer access, and placement operations.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
   icons: {
     icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
     apple: '/apple-icon.png',
