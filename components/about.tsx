@@ -2,7 +2,6 @@ import {
   Target,
   Compass,
   Heart,
-  ArrowUpRight,
 } from 'lucide-react'
 
 const VALUES = [
@@ -117,12 +116,6 @@ export function About() {
                   <p className="mt-4 max-w-sm text-sm leading-6 text-[#96919c] sm:text-[15px]">
                     {value.body}
                   </p>
-
-                  {/* Small arrow */}
-                  <ArrowUpRight
-                    className="absolute right-0 top-10 size-4 text-[#514d57] lg:right-9"
-                    strokeWidth={1.6}
-                  />
 
                 </div>
               )

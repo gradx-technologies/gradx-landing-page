@@ -1,6 +1,5 @@
 import type { LucideIcon } from 'lucide-react'
 import {
-  ArrowUpRight,
   Handshake,
   UserCheck,
   CalendarClock,
@@ -84,9 +83,9 @@ function CapabilityRow({
         {title}
       </span>
 
-      <ArrowUpRight
-        className="ml-auto size-4 text-[#b0abb7]"
-        strokeWidth={1.8}
+      <span
+        aria-hidden="true"
+        className="ml-auto size-2 rounded-full bg-[#c8bef7] shadow-[0_0_0_4px_rgba(238,234,255,0.9)]"
       />
     </div>
   )

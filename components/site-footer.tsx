@@ -22,7 +22,7 @@ const LINKS = [
     items: [
       { label: 'About', href: '#about' },
       { label: 'Contact', href: '#contact' },
-      { label: 'Careers', href: '#contact' },
+      { label: 'LinkedIn', href: 'https://www.linkedin.com/company/gradx-technologies' },
     ],
   },
 ]
@@ -80,6 +80,8 @@ export function SiteFooter() {
                   <li key={item.label}>
                     <a
                       href={item.href}
+                      target={item.href.startsWith('http') ? '_blank' : undefined}
+                      rel={item.href.startsWith('http') ? 'noreferrer' : undefined}
                       className="text-sm text-[#77727e] transition-colors hover:text-[#c5c0cc]"
                     >
                       {item.label}
