@@ -126,7 +126,7 @@ export function Contact() {
           <div className="rounded-[1.5rem] border border-[#e2dfe7] bg-white p-6 sm:p-8 lg:p-10">
 
             {submitted ? (
-              <div className="flex min-h-[480px] flex-col items-center justify-center px-4 text-center">
+              <div className="flex min-h-[360px] flex-col items-center justify-center px-4 text-center">
 
                 <div className="flex size-14 items-center justify-center rounded-full bg-[#eeeaff]">
                   <CheckCircle2
