@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { type FormEvent, useState } from 'react'
 import {
   ArrowRight,
   CheckCircle2,
@@ -27,6 +27,49 @@ import {
 
 export function Contact() {
   const [submitted, setSubmitted] = useState(false)
+  const [audience, setAudience] = useState('College')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [formError, setFormError] = useState('')
+
+  async function submitContactForm(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    setFormError('')
+
+    const form = event.currentTarget
+    const fields = new FormData(form)
+
+    setIsSubmitting(true)
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: fields.get('name'),
+          organization: fields.get('organization'),
+          email: fields.get('email'),
+          audience,
+          message: fields.get('message'),
+          website: fields.get('website'),
+        }),
+      })
+
+      const result = (await response.json()) as { error?: string }
+
+      if (!response.ok) {
+        setFormError(result.error ?? 'We could not send your request. Please try again.')
+        return
+      }
+
+      form.reset()
+      setAudience('College')
+      setSubmitted(true)
+    } catch {
+      setFormError('We could not send your request. Check your connection and try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
 
   return (
     <section
@@ -102,8 +145,8 @@ export function Contact() {
                 </p>
 
                 <Button
-                  variant="outline"
-                  className="mt-7 rounded-full border-[#d8d4de]"
+                  size="lg"
+                  className="mt-7 h-11 rounded-full bg-[#17151c] px-6 text-sm font-medium text-white hover:bg-[#25222c]"
                   onClick={() => setSubmitted(false)}
                 >
                   Submit another request
@@ -111,13 +154,13 @@ export function Contact() {
 
               </div>
             ) : (
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault()
-                  setSubmitted(true)
-                }}
-              >
+              <form onSubmit={submitContactForm} noValidate>
                 <FieldGroup>
+
+                  <div className="sr-only" aria-hidden="true">
+                    <label htmlFor="website">Website</label>
+                    <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
+                  </div>
 
                   {/* Name + Organization */}
                   <div className="grid gap-5 sm:grid-cols-2">
@@ -148,8 +191,8 @@ export function Contact() {
                       </FieldLabel>
 
                       <Input
-                        id="org"
-                        name="org"
+                        id="organization"
+                        name="organization"
                         placeholder="Institution or company"
                         required
                         className="h-11 border-[#ddd9e2] bg-[#fafafa] text-[#17151c] placeholder:text-[#aaa5b0] focus-visible:border-[#8066e6] focus-visible:ring-[#8066e6]/20"
@@ -184,7 +227,10 @@ export function Contact() {
                         I am reaching out as
                       </FieldLabel>
 
-                      <Select defaultValue="College">
+                      <Select
+                        value={audience}
+                        onValueChange={(value) => setAudience(value ?? 'College')}
+                      >
                         <SelectTrigger size="lg" className="w-full rounded-lg border-[#ddd9e2] bg-[#fafafa] px-3 text-sm text-[#34313a]">
                           <SelectValue />
                         </SelectTrigger>
@@ -232,14 +278,21 @@ export function Contact() {
                   <Button
                     type="submit"
                     size="lg"
+                    disabled={isSubmitting}
                     className="h-11 rounded-full bg-[#17151c] px-6 text-sm font-medium text-white hover:bg-[#25222c] sm:w-fit"
                   >
-                    Send request
+                    {isSubmitting ? 'Sending request' : 'Send request'}
                     <ArrowRight
                       className="ml-1 size-4"
                       strokeWidth={1.8}
                     />
                   </Button>
+
+                  {formError ? (
+                    <p className="text-sm text-[#b42318]" role="alert">
+                      {formError}
+                    </p>
+                  ) : null}
 
                 </FieldGroup>
               </form>

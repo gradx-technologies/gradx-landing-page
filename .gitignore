@@ -7,10 +7,13 @@ __v0_jsx-dev-runtime.ts
 .vercel/
 
 # Environment variables
+.env
 .env*.local
+.codex/
 
 # Common ignores
 node_modules
 .next/
 .DS_Store
 *.tsbuildinfo
+.neon
