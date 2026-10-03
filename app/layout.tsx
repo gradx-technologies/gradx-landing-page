@@ -15,13 +15,28 @@ const geistMono = Geist_Mono({
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ??
-  'https://gradx-landing-page-skuk.vercel.app'
+  'https://gradx.app'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: 'GradX | Placement Infrastructure for Colleges',
+  title: {
+    default: 'GradX | Placement Infrastructure for Colleges',
+    template: '%s | GradX',
+  },
+  applicationName: 'GradX',
   description:
-    'GradX is your college\u2019s extended placement team. Build stronger employer connections, prepare students for recruitment, and streamline placement execution end to end.',
+    'GradX is placement infrastructure for colleges. Prepare students, build stronger employer connections, and run every stage of placement through one connected system.',
+  keywords: [
+    'placement infrastructure for colleges',
+    'college placement management',
+    'campus recruitment platform',
+    'student employability platform',
+    'employer relations for colleges',
+    'GradX',
+  ],
+  creator: 'GradX',
+  publisher: 'GradX',
+  category: 'Education technology',
   alternates: {
     canonical: '/',
   },
@@ -30,15 +45,15 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: '/',
     siteName: 'GradX',
-    title: 'GradX | The Future of Placements',
+    title: 'GradX | Placement Infrastructure for Colleges',
     description:
-      'Placement infrastructure that connects student readiness, employer access, and placement operations.',
+      'Prepare students, strengthen employer relationships, and run placement operations through one connected system.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GradX | The Future of Placements',
+    title: 'GradX | Placement Infrastructure for Colleges',
     description:
-      'Placement infrastructure that connects student readiness, employer access, and placement operations.',
+      'Prepare students, strengthen employer relationships, and run placement operations through one connected system.',
   },
   robots: {
     index: true,
@@ -55,6 +70,7 @@ export const metadata: Metadata = {
     icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
     apple: '/apple-icon.png',
   },
+  manifest: '/manifest.webmanifest',
 }
 
 export const viewport: Viewport = {
