@@ -67,9 +67,9 @@ export function SiteHeader() {
           <Image
             src="/gx_logo.png"
             alt=""
-            width={72}
-            height={31}
-            className="h-7 w-auto transition-transform duration-300 group-hover:scale-105"
+            width={112}
+            height={32}
+            className="h-8 w-auto transition-transform duration-300 group-hover:scale-105"
           />
 
         </a>

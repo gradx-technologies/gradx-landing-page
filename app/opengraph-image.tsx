@@ -22,8 +22,8 @@ const colors = {
 const stages = ['Prepare', 'Connect', 'Execute', 'Measure']
 
 export default async function OpenGraphImage() {
-  const [logo, medium, semibold, bold] = await Promise.all([
-    readFile(join(process.cwd(), 'public', 'gx_logo.png'), 'base64'),
+  const [icon, medium, semibold, bold] = await Promise.all([
+    readFile(join(process.cwd(), 'public', 'favicon-192.png'), 'base64'),
     readFile(join(process.cwd(), 'assets', 'Geist-500.ttf')),
     readFile(join(process.cwd(), 'assets', 'Geist-600.ttf')),
     readFile(join(process.cwd(), 'assets', 'Geist-700.ttf')),
@@ -94,7 +94,7 @@ export default async function OpenGraphImage() {
 
       <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', width: '100%', height: '100%', padding: '64px 80px 60px' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <img src={`data:image/png;base64,${logo}`} width={125} height={54} alt="" />
+          <img src={`data:image/png;base64,${icon}`} width={64} height={64} alt="" />
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 20px', border: `1px solid ${colors.border}`, borderRadius: 9999, backgroundColor: 'rgba(255,255,255,0.75)', color: colors.muted, fontSize: 20, fontWeight: 500 }}>
             <span style={{ display: 'flex', width: 9, height: 9, borderRadius: 9999, backgroundImage: `linear-gradient(135deg, ${colors.indigo}, ${colors.violet})` }} />
             Placement Infrastructure
