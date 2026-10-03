@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Mail, Phone } from 'lucide-react'
 
 const LINKS = [
@@ -52,22 +53,23 @@ export function SiteFooter() {
         {/* Main footer */}
         <div className="grid gap-12 border-t border-[#302d36] py-14 sm:py-16 lg:grid-cols-[1fr_auto] lg:items-center">
 
-          {/* Large GradX wordmark */}
+          {/* Muted GradX icon */}
           <a
             href="#top"
             aria-label="GradX"
-            className="relative flex h-[110px] items-center overflow-hidden"
+            className="relative flex h-[110px] items-center justify-center overflow-hidden sm:justify-start"
           >
-            <span
-              aria-hidden="true"
-              className="whitespace-nowrap bg-[linear-gradient(45deg,rgba(182,177,187,0.3)_0%,rgba(182,177,187,0.12)_100%)] bg-clip-text text-[clamp(5rem,9vw,7.5rem)] font-semibold leading-none tracking-[-0.03em] text-transparent"
-            >
-              GradX
-            </span>
+            <Image
+              src="/favicon.svg"
+              alt=""
+              width={110}
+              height={110}
+              className="size-24 brightness-0 invert opacity-[0.2] transition-opacity duration-300 hover:opacity-30 sm:size-[110px]"
+            />
           </a>
 
           {/* Navigation */}
-          <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3 sm:gap-8 lg:gap-10">
+          <div className="grid grid-cols-1 gap-y-9 text-center sm:grid-cols-3 sm:gap-x-8 sm:gap-y-10 sm:text-left lg:gap-10">
 
             {/* Platform */}
             <div className="min-w-0 sm:min-w-[110px]">
@@ -112,7 +114,7 @@ export function SiteFooter() {
             </div>
 
             {/* Company */}
-            <div className="col-span-2 min-w-0 sm:col-span-1 sm:min-w-[100px]">
+            <div className="min-w-0 sm:min-w-[100px]">
               <p className="mb-5 text-sm font-medium text-white">
                 Company
               </p>
@@ -136,7 +138,7 @@ export function SiteFooter() {
 
         {/* Contact strip */}
         <div className="border-t border-[#302d36] py-8">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
             <a
               href="mailto:partnerships@gradx.app"
               className="group flex w-fit items-center gap-3"
@@ -171,12 +173,12 @@ export function SiteFooter() {
           </div>
 
           {/* Copyright + legal links, aligned to the right of the strip */}
-          <div className="mt-6 flex flex-col gap-4 border-t border-[#302d36] pt-5 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-6 flex flex-col items-center gap-4 border-t border-[#302d36] pt-5 text-center sm:flex-row sm:justify-between sm:text-left">
             <p className="text-xs leading-5 text-[#77727e]">
               © {new Date().getFullYear()} GradX. All rights reserved.
             </p>
 
-            <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs">
+            <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs sm:justify-start">
               <a
                 href="#top"
                 className="text-[#77727e] transition-colors hover:text-white"
