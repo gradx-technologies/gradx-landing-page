@@ -1,4 +1,5 @@
 import { Users, Building2, ClipboardList } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const GAPS = [
   {
@@ -51,15 +52,16 @@ export function PlacementGap() {
             const Icon = gap.icon;
 
             return (
-              <article
+              <Card
                 key={gap.title}
                 className={[
-                  "relative flex min-h-[430px] flex-col overflow-hidden px-7 py-8 sm:px-9 sm:py-10",
+                  "relative min-h-[430px] rounded-none border-0 py-0 shadow-none",
                   index !== GAPS.length - 1
                     ? "border-b border-[#e5e2e9] lg:border-b-0 lg:border-r"
                     : "",
                 ].join(" ")}
               >
+                <CardContent className="flex min-h-[430px] flex-col px-7 py-8 sm:px-9 sm:py-10">
                 {/* Large background number. */}
                 <span
                   aria-hidden="true"
@@ -89,7 +91,8 @@ export function PlacementGap() {
                     {gap.body}
                   </p>
                 </div>
-              </article>
+                </CardContent>
+              </Card>
             );
           })}
         </div>

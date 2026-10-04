@@ -22,7 +22,7 @@ Use **Geist** for all interface and marketing copy.
 font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
 ```
 
-Use **Geist Mono** only for small technical labels, metadata, or eyebrow text.
+Use **Geist Mono** only for technical identifiers and machine-oriented metadata.
 
 ```css
 font-family: var(--font-geist-mono), ui-monospace, monospace;
@@ -37,7 +37,11 @@ font-family: var(--font-geist-mono), ui-monospace, monospace;
 | Card heading | `text-3xl` / `text-[1.75rem]` | `font-semibold`, tight tracking |
 | Body | `text-[15px] leading-7` | Default descriptive copy |
 | Small body | `text-sm leading-6` | Cards, labels, supporting details |
-| Eyebrow | `text-[11px] font-semibold uppercase tracking-[0.14em]` | Use sparingly |
+
+Do not use eyebrow text anywhere in GradX. A page or section begins with its
+heading, followed by supporting copy when needed. Ordinary field labels must
+remain sentence case and must not imitate eyebrows with uppercase text and
+wide letter spacing.
 
 ### Heading treatment
 
@@ -164,7 +168,7 @@ className="rounded-[1.75rem] border border-[#dfdce5] bg-[#fafafa] px-7 py-8 sm:p
 
 ### Navigation
 
-- Desktop: minimal text links, `text-[15px] font-medium text-slate-600`.
+- Desktop: minimal text links, `text-[15px] font-medium text-[#706B77]`.
 - Header height: `h-[82px]`.
 - Header becomes `bg-white/90 backdrop-blur-xl` after scroll.
 - Mobile navigation expands as a continuation of the header, not a detached popup.
@@ -231,6 +235,7 @@ Before shipping a new GradX surface, verify:
 - [ ] Layout uses the shared `max-w-7xl` container and responsive padding.
 - [ ] CTAs use pill corners.
 - [ ] Cards have quiet borders and generous radii.
+- [ ] No eyebrow labels or eyebrow-style uppercase tracking are present.
 - [ ] Mobile navigation is attached to the header.
 - [ ] Footer contact and legal rows remain readable at mobile widths.
 - [ ] All anchor links account for the fixed header.

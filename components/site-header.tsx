@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { Menu, ArrowUpRight, X } from 'lucide-react'
+import { Button, buttonVariants } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
 const NAV_LINKS = [
@@ -102,22 +103,7 @@ export function SiteHeader() {
           <a
             href="#contact"
             onClick={(event) => navigateToSection(event, '#contact')}
-            className="
-              group
-              inline-flex
-              h-11
-              items-center
-              gap-2
-              rounded-full
-              bg-[#0B1220]
-              px-5
-              text-[14px]
-              font-medium
-              text-white
-              transition-all
-              duration-200
-              hover:bg-[#162238]
-            "
+            className={buttonVariants({ className: 'group bg-[#17151c] hover:bg-[#25222c]' })}
           >
             Book a Discussion
 
@@ -134,24 +120,11 @@ export function SiteHeader() {
         </div>
 
         {/* Mobile Menu Button */}
-        <button
-          type="button"
+        <Button
           onClick={() => setOpen((value) => !value)}
-          className="
-            ml-auto
-            flex
-            size-10
-            items-center
-            justify-center
-            rounded-full
-            border border-slate-200/80
-            bg-white/80
-            text-[#0B1220]
-            shadow-sm
-            transition-all duration-300
-            hover:scale-105 hover:bg-white
-            xl:hidden
-          "
+          className="ml-auto bg-white/80 text-[#17151c] shadow-sm hover:scale-105 hover:bg-white xl:hidden"
+          size="icon"
+          variant="outline"
           aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
           aria-controls="mobile-navigation"
@@ -161,7 +134,7 @@ export function SiteHeader() {
           ) : (
             <Menu className="size-5" />
           )}
-        </button>
+        </Button>
       </div>
 
       {/* Mobile Navigation */}
@@ -201,22 +174,7 @@ export function SiteHeader() {
           <a
             href="#contact"
             onClick={(event) => navigateToSection(event, '#contact')}
-            className="
-              mt-3
-              flex
-              h-11
-              items-center
-              justify-center
-              gap-2
-              rounded-full
-              bg-[#0B1220]
-              px-5
-              text-[14px]
-              font-medium
-              text-white
-              transition-all
-              hover:bg-[#162238] hover:shadow-[0_10px_24px_rgba(11,18,32,0.18)]
-            "
+            className={buttonVariants({ className: 'mt-3 flex w-full bg-[#17151c] hover:bg-[#25222c]' })}
           >
             Book a Placement Discussion
 
