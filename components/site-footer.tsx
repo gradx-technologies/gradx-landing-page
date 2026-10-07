@@ -167,7 +167,7 @@ export function SiteFooter() {
               </span>
 
               <span className="text-sm font-medium text-[#c5c0cc] transition-colors group-hover:text-white">
-                +91 91486 30441
+                +91 63623 26581
               </span>
             </a>
           </div>
