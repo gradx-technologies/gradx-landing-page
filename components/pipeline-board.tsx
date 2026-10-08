@@ -13,7 +13,7 @@ export function PipelineBoard() {
     <div className="rounded-xl border border-border bg-background p-5">
       <div className="flex items-center justify-between">
         <div className="flex flex-col gap-0.5">
-          <span className="font-mono text-[0.7rem] tracking-wide text-muted-foreground uppercase">
+          <span className="font-mono text-[0.7rem] text-muted-foreground">
             Placement Pipeline
           </span>
           <span className="text-sm font-medium">Batch 2026 &middot; Overview</span>

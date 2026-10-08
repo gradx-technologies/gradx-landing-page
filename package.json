@@ -9,7 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@base-ui/react": "^1.5.0",
+    "@base-ui/react": "^1.8.0",
     "@neon/config": "^1.8.3",
     "@neon/env": "^1.4.8",
     "@neondatabase/serverless": "^1.1.0",

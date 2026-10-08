@@ -6,6 +6,7 @@ import { HowItWorks } from '@/components/how-it-works'
 import { Solutions } from '@/components/solutions'
 import { ForColleges, ForEmployers } from '@/components/audience-section'
 // import { Results } from '@/components/results'
+import { Partners } from '@/components/partners'
 import { About } from '@/components/about'
 import { Contact } from '@/components/contact'
 import { SiteFooter } from '@/components/site-footer'
@@ -53,6 +54,7 @@ export default function Page() {
         <ForColleges />
         <ForEmployers />
         {/* <Results /> */}
+        <Partners />
         <About />
         <Contact />
       </main>

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { ArrowRight } from 'lucide-react'
+import { buttonVariants } from '@/components/ui/button'
 import {
   Shader,
   Swirl,
@@ -102,7 +103,7 @@ export function Hero() {
           {/* Primary CTA */}
           <a
             href="#contact"
-            className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-[#16161d] px-6 text-[13px] font-medium text-white shadow-[0_8px_30px_rgba(22,22,29,0.14)]"
+            className={buttonVariants({ className: 'bg-[#17151c] shadow-[0_8px_30px_rgba(22,22,29,0.14)] hover:bg-[#25222c]' })}
           >
             Partner With Us
             <ArrowRight className="size-3.5" />
@@ -111,7 +112,7 @@ export function Hero() {
           {/* Secondary CTA */}
           <a
             href="#how-it-works"
-            className="inline-flex h-11 items-center justify-center rounded-full border border-[#bdb9c8]/80 bg-white/30 px-6 text-[13px] font-medium text-[#25232b] backdrop-blur-sm"
+            className={buttonVariants({ variant: 'outline', className: 'border-[#bdb9c8]/80 bg-white/30 backdrop-blur-sm' })}
           >
             Explore How It Works
           </a>

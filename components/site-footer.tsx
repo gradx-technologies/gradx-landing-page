@@ -8,6 +8,7 @@ const LINKS = [
       { label: 'Solutions', href: '#solutions' },
       { label: 'How It Works', href: '#how-it-works' },
       { label: 'Placement Journey', href: '#how-it-works' },
+      { label: 'Our Partners', href: '#partners' },
     ],
   },
   {

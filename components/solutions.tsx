@@ -4,6 +4,7 @@ import {
   Workflow,
   BarChart3,
 } from 'lucide-react'
+import { Card, CardContent } from '@/components/ui/card'
 
 const PILLARS = [
   {
@@ -62,10 +63,12 @@ export function Solutions() {
             const Icon = pillar.icon
 
             return (
-              <article
+              <Card
                 key={pillar.name}
-                className="relative min-h-[440px] overflow-hidden rounded-[1.75rem] border border-[#dfdce5] bg-[#fafafa] px-7 py-8 sm:px-8 sm:py-9"
+                className="relative min-h-[440px] bg-[#fafafa] py-0"
               >
+
+                <CardContent className="px-7 py-8 sm:px-8 sm:py-9">
 
                 {/* Subtle orbital form gives each pillar a visual signature. */}
                 <div
@@ -115,7 +118,8 @@ export function Solutions() {
                   </ul>
 
                 </div>
-              </article>
+                </CardContent>
+              </Card>
             )
           })}
         </div>
