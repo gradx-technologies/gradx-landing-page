@@ -175,7 +175,7 @@ section[id] {
   background-size: 20px 20px;
 }
 
-/* Animated aurora — blurred, drifting gradient blobs behind the hero. */
+/* Animated aurora: blurred, drifting gradient blobs behind the hero. */
 .aurora-blob {
   position: absolute;
   border-radius: 9999px;
@@ -278,7 +278,7 @@ section[id] {
   }
 }
 
-/* Glass Agency Hero — staggered entrance reveal. */
+/* Glass Agency Hero: staggered entrance reveal. */
 .reveal {
   opacity: 0;
   transform: translateY(14px);

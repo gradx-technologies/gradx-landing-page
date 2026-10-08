@@ -11,6 +11,7 @@ const NAV_LINKS = [
   { label: 'How It Works', href: '#how-it-works' },
   { label: 'For Colleges', href: '#audience' },
   { label: 'For Employers', href: '#audience' },
+  { label: 'Partners', href: '#partners' },
   { label: 'About', href: '#about' },
 ]
 
