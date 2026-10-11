@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 
-import { PARTNERS} from '@/data/partners'
+import { PARTNERS } from '@/data/partners'
 import styles from './partner-carousel.module.css'
 
 const SLIDES = PARTNERS.length === 1
@@ -199,7 +199,7 @@ export function PartnerCarousel() {
               width={partner.width}
               height={partner.height}
               sizes="(max-width: 640px) 80vw, (max-width: 1024px) 55vw, 390px"
-              className="h-auto w-full max-w-[260px] opacity-[0.82] sm:max-w-[390px]"
+              className="h-auto w-full max-w-[260px] grayscale mix-blend-multiply opacity-[0.82] sm:max-w-[390px]"
             />
           </div>
         ))}

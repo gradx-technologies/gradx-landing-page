@@ -18,6 +18,15 @@ export const PARTNERS: Partner[] = [
     description:
       'chose GradX to bring employer connections and placement coordination together, creating a clearer path from campus to career.',
   },
+  {
+    id: 'sri-krishna-institute-of-technology',
+    name: 'Sri Krishna Institute of Technology',
+    logo: '/sri-krishna-institute-of-technology.png',
+    width: 447,
+    height: 447,
+    description:
+      'is partnering with GradX to connect student preparation, employer engagement, and placement execution, creating stronger pathways from campus to career.',
+  },
 ]
 
 // The test slide disappears automatically when another real college is added.
