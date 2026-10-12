@@ -21,11 +21,20 @@ export const PARTNERS: Partner[] = [
   {
     id: 'sri-krishna-institute-of-technology',
     name: 'Sri Krishna Institute of Technology',
-    logo: '/sri-krishna-institute-of-technology.png',
-    width: 447,
-    height: 447,
+    logo: '/sri-krishna-institute-of-technology-monochrome.png',
+    width: 800,
+    height: 800,
     description:
       'is partnering with GradX to connect student preparation, employer engagement, and placement execution, creating stronger pathways from campus to career.',
+  },
+  {
+    id: 'srs-group-of-institutions',
+    name: 'SRS Group of Institutions',
+    logo: '/srs-group-of-institutions-monochrome.png',
+    width: 800,
+    height: 800,
+    description:
+      'has chosen GradX to strengthen training and placements across its colleges, connecting student preparation with stronger employer access and career outcomes.',
   },
 ]
 
