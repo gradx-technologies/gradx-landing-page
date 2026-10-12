@@ -34,7 +34,7 @@ export const PARTNERS: Partner[] = [
     width: 800,
     height: 800,
     description:
-      'has chosen GradX to strengthen training and placements across its colleges, connecting student preparation with stronger employer access and career outcomes.',
+      'has chosen GradX to strengthen training and placements across its departments, connecting student preparation with stronger employer access and career outcomes.',
   },
 ]
 
