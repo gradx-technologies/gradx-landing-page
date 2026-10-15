@@ -12,7 +12,7 @@ export function Partners() {
         aria-hidden="true"
       />
 
-      <div className="relative mx-auto max-w-7xl px-6 py-24 sm:px-10 lg:px-12 lg:py-32">
+      <div className="relative mx-auto max-w-7xl px-6 pt-20 sm:px-10 lg:px-12 lg:pt-28">
         <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
           <h2 className="max-w-4xl text-balance text-[3rem] font-medium leading-[0.98] tracking-[-0.055em] text-[#17151c] sm:text-[4.25rem] lg:text-[5rem]">
             Shared ambition.
@@ -27,10 +27,11 @@ export function Partners() {
             student deserves a clearer path from preparation to opportunity.
           </p>
         </div>
+      </div>
 
-        <div className="mt-16 overflow-hidden rounded-[2rem] border border-[#dfdce5] bg-white lg:mt-20">
-          <PartnerCarousel />
-        </div>
+      {/* Auto-scrolling logos spanning full width without background, borders, or scrollbars */}
+      <div className="relative w-full overflow-hidden py-16 sm:py-20 lg:py-24 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <PartnerCarousel />
       </div>
     </section>
   )

@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: '/',
     siteName: 'GradX',
-    title: 'GradX | Placement Infrastructure for Colleges',
+    title: 'GradX  Placement Infrastructure for Colleges',
     description:
       'Prepare students, strengthen employer relationships, and run placement operations through one connected system.',
   },
