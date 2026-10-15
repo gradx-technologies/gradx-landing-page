@@ -36,6 +36,42 @@ export const PARTNERS: Partner[] = [
     description:
       'has chosen GradX to strengthen training and placements across its departments, connecting student preparation with stronger employer access and career outcomes.',
   },
+  {
+    id: 'rns-institute-of-technology',
+    name: 'RNS Institute of Technology',
+    logo: '/rns-institute-of-technology-monochrome.png',
+    width: 800,
+    height: 800,
+    description:
+      'has chosen GradX for placement support, connecting its engineering students with stronger employer access and career opportunities.',
+  },
+  {
+    id: 'sapthagiri-college-of-engineering',
+    name: 'Sapthagiri College of Engineering',
+    logo: '/sapthagiri-college-of-engineering-monochrome.png',
+    width: 800,
+    height: 800,
+    description:
+      'has chosen GradX for placement support, connecting its engineering students with stronger employer access and career opportunities.',
+  },
+  {
+    id: 'sri-siddhartha-institute-of-technology',
+    name: 'Sri Siddhartha Institute of Technology',
+    logo: '/sri-siddhartha-institute-of-technology-monochrome.png',
+    width: 800,
+    height: 800,
+    description:
+      'has chosen GradX for placement support, connecting its engineering students with stronger employer access and career opportunities.',
+  },
+  {
+    id: 's-vyasa',
+    name: 'S-VYASA',
+    logo: '/s-vyasa-monochrome.png',
+    width: 800,
+    height: 800,
+    description:
+      'has chosen GradX for placement support, helping students connect with employers and pursue stronger career opportunities.',
+  },
 ]
 
 // The test slide disappears automatically when another real college is added.
