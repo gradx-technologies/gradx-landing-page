@@ -104,6 +104,19 @@ export const PARTNERS: Partner[] = [
     description:
       'has chosen GradX for placement support, helping students connect with employers and pursue stronger career opportunities.',
   },
+  {
+    id: 'christ-university',
+    name: 'CHRIST (Deemed to be University)',
+    shortName: 'CHRIST University',
+    logo: '/christ-university-monochrome.png',
+    width: 800,
+    height: 800,
+    location: 'Bengaluru, Karnataka',
+    type: 'Deemed-to-be University',
+    focusTag: 'University-Wide Placement Support',
+    description:
+      'has chosen GradX for placement support, helping students connect with employers and pursue stronger career opportunities.',
+  },
 ]
 
 // The test slide disappears automatically when another real college is added.
