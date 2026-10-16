@@ -6,10 +6,6 @@
   will-change: transform;
 }
 
-.marqueeTrack:hover {
-  animation-play-state: paused;
-}
-
 /* Uniform grey logos with smooth hover */
 .partnerLogo {
   display: block;
@@ -51,11 +47,5 @@
   }
   to {
     transform: translate3d(-50%, 0, 0);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .marqueeTrack {
-    animation: none;
   }
 }
