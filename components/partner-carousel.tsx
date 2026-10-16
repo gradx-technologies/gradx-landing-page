@@ -12,8 +12,6 @@ export function PartnerCarousel() {
 
   return (
     <div
-      role="region"
-      aria-label="Partner institutions"
       className="relative flex w-full items-center overflow-hidden"
     >
       {/* Soft gradient fades at edges */}
@@ -26,23 +24,30 @@ export function PartnerCarousel() {
         aria-hidden="true"
       />
 
-      {/* Infinite Horizontal Marquee */}
-      <div className={styles.marqueeTrack}>
-        {scrollList.map((partner, index) => (
-          <div
-            key={`${partner.id}-${index}`}
-            className="flex shrink-0 items-center justify-center px-4 sm:px-6 lg:px-8"
-          >
-            <Image
-              src={partner.logo}
-              alt={partner.name}
-              width={partner.width}
-              height={partner.height}
-              className={styles.partnerLogo}
-              draggable={false}
-            />
-          </div>
-        ))}
+      <div
+        role="region"
+        aria-label="Partner institutions"
+        tabIndex={0}
+        className="w-full overflow-x-auto overscroll-x-contain [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      >
+        {/* Infinite Horizontal Marquee */}
+        <div className={styles.marqueeTrack}>
+          {scrollList.map((partner, index) => (
+            <div
+              key={`${partner.id}-${index}`}
+              className="flex shrink-0 items-center justify-center px-4 sm:px-6 lg:px-8"
+            >
+              <Image
+                src={partner.logo}
+                alt={partner.name}
+                width={partner.width}
+                height={partner.height}
+                className={styles.partnerLogo}
+                draggable={false}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )
