@@ -141,7 +141,7 @@ export function SiteFooter() {
         <div className="border-t border-[#302d36] py-8">
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
             <a
-              href="mailto:partnerships@gradx.app"
+              href="mailto:jithendra@gradx.app"
               className="group flex w-fit items-center gap-3"
             >
               <span className="flex size-9 shrink-0 items-center justify-center rounded-full border border-[#39353f] bg-[#1d1a23]">
@@ -152,7 +152,7 @@ export function SiteFooter() {
               </span>
 
               <span className="text-sm font-medium text-[#c5c0cc] transition-colors group-hover:text-white">
-                partnerships@gradx.app
+                jithendra@gradx.app
               </span>
             </a>
 

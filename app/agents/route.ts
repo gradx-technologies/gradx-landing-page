@@ -66,7 +66,7 @@ Use placement analytics, outcome reports, cohort tracking, and benchmarks to imp
 
 ## Contact
 
-- Partnership email: partnerships@gradx.app
+- Partnership email: jithendra@gradx.app
 - Phone: +91 91486 30441
 - Website contact form: /#contact
 
